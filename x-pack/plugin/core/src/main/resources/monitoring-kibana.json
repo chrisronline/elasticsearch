@@ -223,6 +223,21 @@
             },
             "concurrent_connections": {
               "type": "long"
+            },
+            "task_manager": {
+              "properties": {
+                "runtime": {
+                  "properties": {
+                    "duration": {
+                      "properties": {
+                        "p99": {
+                          "type": "long"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         }
