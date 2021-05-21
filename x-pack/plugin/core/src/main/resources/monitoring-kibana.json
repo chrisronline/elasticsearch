@@ -226,12 +226,29 @@
             },
             "task_manager": {
               "properties": {
-                "runtime": {
+                "drift": {
                   "properties": {
-                    "duration": {
+                    "by_type": {
+                      "type": "nested",
                       "properties": {
-                        "p99": {
-                          "type": "long"
+                        "alertType": {
+                          "type": "keyword"
+                        },
+                        "stat": {
+                          "properties": {
+                            "p50": {
+                              "type": "long"
+                            },
+                            "p90": {
+                              "type": "long"
+                            },
+                            "p95": {
+                              "type": "long"
+                            },
+                            "p99": {
+                              "type": "long"
+                            }
+                          }
                         }
                       }
                     }
